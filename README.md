@@ -10,20 +10,25 @@ Rules are passive instructions that shape how Claude behaves in every session. D
 |---|---|
 | [English Coaching](rules/english.md) | Corrects grammar mistakes in real-time, adds Chinese translations, and coaches non-native speakers to write more naturally |
 
-## How to use
+## Installation
 
-Copy any rule file to your Claude Code rules directory:
+One-liner to install any rule:
 
 ```bash
-cp rules/english.md ~/.claude/rules/english.md
+curl -o ~/.claude/rules/english.md https://raw.githubusercontent.com/Kutius/claude-skills/main/rules/english.md
 ```
 
-Claude Code will automatically load it in every session.
+Claude Code will automatically load it in every session. No restart needed.
+
+## Uninstall
+
+```bash
+rm ~/.claude/rules/english.md
+```
 
 ## Structure
 
 ```
 rules/          # Passive rules (always active)
+skills/         # Active skills (slash commands) — coming soon
 ```
-
-More skills coming as I build them.
